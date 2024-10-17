@@ -1,0 +1,210 @@
+@font-face {
+  font-family: 'regular_font';
+  src: url(fonts/NeueMontreal-Regular.otf) format(truetype);
+}
+@font-face {
+  font-family: 'bold_font';
+  src: url(fonts/NeueMontreal-Bold.otf) format(truetype);
+}
+
+:root{
+  --fonte1: 'regular_font';
+  --cor1: #191a3e;
+  --fonte2: 'bold_font';
+    /* light */
+    --color-light-50: #f8fafc;
+  
+    /* dark */
+    --color-dark-50: #444449;
+    --color-dark-100: #1a1a1a;
+    --color-dark-900: #000;
+  
+
+  }
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: var(--fonte1);
+ 
+}
+/*header*/
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 10px 20px;
+  background-color: var(--cor1); 
+}
+
+.header-logo {
+  max-width: 150px;
+  margin-right: 20px; 
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.header-content nav a {
+  text-decoration: none;
+  color: white; 
+  font-weight: bold;
+}
+
+nav>a:hover{
+  text-decoration: underline;
+}
+#divBusca{
+  background-color:#ffffff;
+  border: none;
+  border-radius:20px;
+  width:300px;
+  font-family: var(--fonteTexto);
+}
+
+
+
+  /*loja*/
+  #produtos-container{
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
+    width: 200px;   
+    margin-left: 50px;
+    margin-top: 53px;
+  }
+
+  .produtos{
+    width: 200px;
+    margin-left: 36px;
+
+    text-align: center;
+    gap: 50px;
+    flex: 1;
+    border-width: 5px; 
+    border-style: solid; 
+    border-color:  black; 
+    box-shadow: 0px 10px 8px #888888;
+  }
+  #nome{
+    font-family: var(--fonte2);
+    margin-bottom: 10px;
+  }
+
+  .input-box {
+    padding: 8px 30px 8px 40px; /* Espaço extra à esquerda para a lupa */
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background: url('img/lupa-icon.png') no-repeat 10px center; /* Adiciona a lupa como fundo */
+    background-size: 20px; /* Ajusta o tamanho da lupa */
+    color: black;
+    background-color: white;
+}
+
+
+  /*carrosell*/
+  .slides {
+    position: relative;
+  }
+  #slides{
+    margin-bottom: 250px;
+  }
+  
+  .slide {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  button.prev, button.next {
+    position: absolute;
+    top: 243px;
+    background-color:black;
+    opacity: 50%;
+    color:white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    height: 200px;
+  }
+  
+  button.prev:hover, button.next:hover {
+    opacity: 100%;
+  }
+  
+  button.prev {
+    left: 10px;
+  }
+  
+  button.next {
+    right: 10px;
+  }
+
+  #contato {
+    display: flex;
+    align-items: center;
+    color: var(--color-light-50);
+    background-color: var(--color-dark-100);
+  }
+
+  #contato img {
+    margin-right: 10px; 
+  }
+
+  #nomePessoa {
+    margin: 0;
+  }
+
+  #divBusca {
+    position: relative;
+    width: 300px; /* Largura da barra de pesquisa */
+    margin: 10px auto; /* Centraliza a barra na página */
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Bordas arredondadas para a barra */
+    overflow: hidden; /* Para cortar bordas arredondadas */
+    width: 99%;
+    margin-top: 400px;
+  }
+
+  #input-digitar {
+    width: 100%; /* Preenche toda a largura da barra de pesquisa */
+    padding: 10px 15px; /* Padding para o texto */
+    border: none;
+    outline: none; /* Remove a borda de foco padrão */
+    font-size: 16px;
+
+  }
+
+  #botao-enviar {
+    background-color: rgb(3, 3, 206); /* Cor de fundo do botão */
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #botao-enviar:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+  }
+
+  .input-icon {
+    width: 30px;
+    height: 30px;
+  }
+
